@@ -4,7 +4,7 @@ When opened, the user sees the current date and a planner including times from 9
 
 Throughout the course of the day, the past, current and future hours will change color for easy visible accessibility.
 
-(images/Work-Day-Scheduler screenshot.png)
+("images/Work-Day-Scheduler screenshot.png")
 
 Live link:
 https://saraw54.github.io/Work-Day-Scheduler/
