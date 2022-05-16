@@ -49,11 +49,19 @@ function addToDo(i) {
     return "<input id=\"" + timeArray[i] + "note\" class=\"col-xs-10 col-sm-8 " + bgColor + "\" > </input>";
 }
 
-/** */
+/** 
+ * adds save button to form
+ * @param i - index to save
+ * @returns - initials save function to local storage
+*/
 
 function addSaveBtn(i) {
-    return "<button id=\"" + timeArray[i] + "btn\" class=\"col-xs-2 col-sm-2\" onclick=saveTask(\"" + timeArray[i] + "\")> S </button>";
+    return "<button id=\"" + timeArray[i] + "btn\" class=\"col-xs-2 col-sm-2\" onclick=saveTask(\"" + timeArray[i] + "\")> Save </button>";
 }
+/** 
+ * generates table with above functionality
+ * @returns the table with times, task and save button
+ * */
 
 function buildTable() {
     var calenderTable = $("#calenderTable");
@@ -65,6 +73,10 @@ function buildTable() {
     }
     calenderTable.html(accum);
 }
+
+/**
+ * @returns what is stored from under the task key in local storage
+ */
 function getTask() {
     var saveTask = localStorage.getItem("task");
     if (saveTask == null) {
@@ -79,6 +91,7 @@ function getTask() {
     return saveTask;
 }
 
+// writes the inputted information on refresh
 
 function populateTable() {
     var tasks = getTask();
@@ -88,6 +101,7 @@ function populateTable() {
     }
 }
 
+//saves the data to local storage
 
 function saveTask(id) {
     console.log("saveTask");
